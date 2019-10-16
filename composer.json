@@ -22,6 +22,7 @@
       "email": "hchinchilla@habitissimo.com"
     }
   ],
+  "license": "MIT",
   "require": {
     "php-ds/php-ds": "^1.2",
     "symfony/form": "^4.1",

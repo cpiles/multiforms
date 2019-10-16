@@ -28,6 +28,7 @@
   ],
   "license": "MIT",
   "require": {
+    "myclabs/php-enum": "^1.6",
     "php-ds/php-ds": "^1.2",
     "symfony/form": "^4.1",
     "symfony/security-csrf": "^4.1",

@@ -26,7 +26,6 @@ class StateMachineTest extends TestCase
     $state = 'test_state';
     $this->state_machine->setState($state);
 
-
     $this->assertEquals($state, $this->state_machine->getState());
   }
 

@@ -16,7 +16,7 @@ class StateMachineTest extends TestCase
    */
   private $state_machine;
 
-  protected function setUp()
+  protected function setUp(): void
   {
     $this->state_machine = new StateMachine();
   }

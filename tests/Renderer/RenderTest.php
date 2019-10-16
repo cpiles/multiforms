@@ -13,12 +13,10 @@ use PHPUnit\Framework\TestCase;
 class RenderTest extends TestCase
 {
   private $render;
-  private $stubs;
 
-  protected function setUp()
+  protected function setUp(): void
   {
     $this->render = new Render();
-    $this->stubs = new Stubs();
   }
 
   public function test_has_default_theme_path()

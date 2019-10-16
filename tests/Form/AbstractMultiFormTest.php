@@ -10,34 +10,28 @@ use Habitissimo\MultiForm\Form\Entity\LinearDirector;
 use Habitissimo\MultiForm\Form\Entity\Step;
 use Habitissimo\MultiForm\Form\Exception\InvalidFormTypeClass;
 use Habitissimo\MultiForm\Form\Exception\StateIsAlreadyDefined;
-use Habitissimo\MultiFormExamples\Pizza\IsVegan;
-use Habitissimo\MultiFormTest\Stubs;
+use Habitissimo\MultiFormTest\Form\StubType;
+use Habitissimo\MultiFormTest\Form\StubQuestion;
 use PHPUnit\Framework\TestCase;
 
 abstract class AbstractMultiFormTest extends TestCase
 {
-  /** @var AbstractMultiForm */
   protected $multi_form;
-
-  /** @var Stubs */
-  protected $stubs;
 
   protected $name;
 
   abstract protected function getMultiForm(): AbstractMultiForm;
 
-  protected function setUp()
+  protected function setUp(): void
   {
     $this->multi_form = $this->getMultiForm();
-    $this->stubs = new Stubs();
   }
 
   public function test_add_step()
   {
     $state = 'test_state';
-    $type = $this->stubs->randomFormType();
 
-    $this->multi_form->addStep($state, $type);
+    $this->multi_form->addStep($state, StubType::class);
 
     $this->assertInstanceOf(Step::class, $this->multi_form->step($state));
   }
@@ -45,7 +39,7 @@ abstract class AbstractMultiFormTest extends TestCase
   public function test_add_step_already_exist()
   {
     $state = 'test_state';
-    $type = $this->stubs->randomFormType();
+    $type = StubType::class;
 
     $this->multi_form->addStep($state, $type);
 
@@ -65,7 +59,7 @@ abstract class AbstractMultiFormTest extends TestCase
   public function test_add_step_with_director_null()
   {
     $state = 'test_state';
-    $type = $this->stubs->randomFormType();
+    $type = StubType::class;
 
     $this->multi_form->addStep($state, $type, null);
     $step = $this->multi_form->step($state);
@@ -77,7 +71,7 @@ abstract class AbstractMultiFormTest extends TestCase
   {
     $state = 'test_state';
     $director = 'test_director';
-    $type = $this->stubs->randomFormType();
+    $type = StubType::class;
 
     $this->multi_form->addStep($state, $type, $director);
     $step = $this->multi_form->step($state);
@@ -88,8 +82,8 @@ abstract class AbstractMultiFormTest extends TestCase
   public function test_add_step_with_director()
   {
     $state = 'test_state';
-    $director = new Director('test_positive', 'test_negative', new IsVegan());
-    $type = $this->stubs->randomFormType();
+    $director = new Director('test_positive', 'test_negative', new StubQuestion());
+    $type = StubType::class;
 
     $this->multi_form->addStep($state, $type, $director);
     $step = $this->multi_form->step($state);
@@ -100,7 +94,7 @@ abstract class AbstractMultiFormTest extends TestCase
   public function test_set_initial_step()
   {
     $state = 'test_state';
-    $type = $this->stubs->randomFormType();
+    $type = StubType::class;
     $this->multi_form->addStep($state, $type, null);
 
     $this->multi_form->setInitialStep($state);

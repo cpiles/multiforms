@@ -4,10 +4,6 @@ declare(strict_types = 1);
 
 namespace Habitissimo\MultiFormTest;
 
-use Habitissimo\MultiFormExamples\Pizza\CheeseType;
-use Habitissimo\MultiFormExamples\Pizza\PizzaType;
-use Habitissimo\MultiFormExamples\Pizza\VegetarianType;
-
 class Stubs
 {
   private function typesAndViews(): array

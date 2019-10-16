@@ -9,7 +9,7 @@ use Habitissimo\MultiForm\Form\MultiForm;
 
 class MultiFormTest extends AbstractMultiFormTest
 {
-  protected function setUp()
+  protected function setUp(): void
   {
     $this->name = 'test_form';
     parent::setUp();

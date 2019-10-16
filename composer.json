@@ -27,8 +27,7 @@
   "autoload": {
     "psr-4": {
       "Habitissimo\\MultiForm\\": "src/",
-      "Habitissimo\\MultiFormTest\\": "tests/",
-      "Habitissimo\\MultiFormExamples\\": "examples/"
+      "Habitissimo\\MultiFormTest\\": "tests/"
     }
   }
 }

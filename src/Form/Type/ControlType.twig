@@ -1,0 +1,5 @@
+<div id="multiform_container">
+  {{ form_start(form, {'attr': {novalidate: 'novalidate', 'id': 'multiform-form' } }) }}
+  {% embed multiform_step %}{% endembed %}
+  {{ form_end(form) }}
+</div>

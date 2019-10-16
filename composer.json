@@ -1,0 +1,34 @@
+{
+  "name": "habitissimo/multiforms",
+  "description": "Multi-step forms made easy",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Habitissimo",
+      "email": "opensource@habitissimo.com"
+    },
+    {
+      "name": "Carlos Piles",
+      "email": "cpiles@habitissimo.com"
+    }
+  ],
+  "require": {
+    "symfony/form": "^4.1",
+    "symfony/security-csrf": "^4.1",
+    "symfony/translation": "^4.1",
+    "symfony/twig-bridge": "^4.3",
+    "symfony/validator": "^4.1",
+    "twig/twig": "^2.11"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.2",
+    "php-ds/php-ds": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Habitissimo\\MultiForm\\": "src/",
+      "Habitissimo\\MultiFormTest\\": "tests/",
+      "Habitissimo\\MultiFormExamples\\": "examples/"
+    }
+  }
+}

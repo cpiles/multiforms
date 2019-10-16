@@ -1,0 +1,19 @@
+<div id="form-group-name">
+  {{ form_label(form[multiform_state].name) }}
+  {{ form_widget(form[multiform_state].name, {'id': 'pizza-form-name', 'attr': { 'class': 'form-control'}}) }}
+  {{ form_errors(form[multiform_state].name) }}
+</div>
+
+<div id="form-group-type">
+  {{ form_label(form[multiform_state].type) }}
+  {{ form_widget(form[multiform_state].type, {'id': 'pizza-form-type', 'attr': { 'class': 'form-control'}}) }}
+  {{ form_errors(form[multiform_state].type) }}
+</div>
+
+<br/>
+{{ form_widget(form.next, {'label': 'Siguiente'}) }}
+{{ form_widget(form.prev, {'attr': {'style':'display:none'}}) }}
+{{ form_widget(form.reset, {'attr': {'style':'display:none'}}) }}
+
+<h6>The track event is {{ form[multiform_state].vars.track_event }}</h6>
+

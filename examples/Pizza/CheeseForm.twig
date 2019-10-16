@@ -1,0 +1,15 @@
+{{ form_start(form, {'attr': {novalidate: 'novalidate', 'id': 'cheese-form', 'class': 'form-horizontal' } }) }}
+<div id="form-group-beef">
+  {{ form_label(form[multiform_state].cheese) }}
+  {{ form_widget(form[multiform_state].cheese, {'id': 'cheese-form-cheese', 'attr': { 'class': 'form-control'}}) }}
+  {{ form_errors(form[multiform_state].cheese) }}
+</div>
+
+<br/>
+
+{#{{ form_widget(form.next, {'label': 'Siguiente'}) }}#}
+{#{{ form_widget(form.prev, {'label': 'Volver'}) }}#}
+{#{{ form_widget(form.reset, {'label': 'Reiniciar'}) }}#}
+
+{{ form_end(form) }}
+

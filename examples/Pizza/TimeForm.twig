@@ -1,0 +1,12 @@
+<div id="form-group-time">
+  {{ form_label(form[multiform_state].time) }}
+  {{ form_widget(form[multiform_state].time, {'id': 'time-form-time', 'attr': { 'class': 'form-control'}}) }}
+  {{ form_errors(form[multiform_state].time) }}
+</div>
+
+<br/>
+
+{#{{ form_widget(form.next, {'label': 'Finalizar'}) }}#}
+{#{{ form_widget(form.prev, {'label': 'Volver'}) }}#}
+{#{{ form_widget(form.reset, {'label': 'Reiniciar'}) }}#}
+

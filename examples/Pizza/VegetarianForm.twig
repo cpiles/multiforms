@@ -1,0 +1,34 @@
+{{ form_start(form, {'attr': {novalidate: 'novalidate', 'id': 'vegetarian-form', 'class': 'form-horizontal' } }) }}
+
+<div id="form-group-pineapple">
+  {{ form_label(form[multiform_state].pineapple) }}
+  {{ form_widget(form[multiform_state].pineapple, {'id': 'vegetarian-form-pineapple', 'attr': { 'class': 'form-control'}}) }}
+  {{ form_errors(form[multiform_state].pineapple) }}
+</div>
+
+<div id="form-group-onion">
+  {{ form_label(form[multiform_state].onion) }}
+  {{ form_widget(form[multiform_state].onion, {'id': 'vegetarian-form-onion', 'attr': { 'class': 'form-control'}}) }}
+  {{ form_errors(form[multiform_state].onion) }}
+</div>
+
+<div id="form-group-name">
+  {{ form_label(form[multiform_state].mushroom) }}
+  {{ form_widget(form[multiform_state].mushroom, {'id': 'vegetarian-form-mushroom', 'attr': { 'class': 'form-control'}}) }}
+  {{ form_errors(form[multiform_state].mushroom) }}
+</div>
+
+<div id="form-group-name">
+  {{ form_label(form[multiform_state].vegan) }}
+  {{ form_widget(form[multiform_state].vegan, {'id': 'vegetarian-form-vegan', 'attr': { 'class': 'form-control'}}) }}
+  {{ form_errors(form[multiform_state].vegan) }}
+</div>
+
+<br/>
+
+{{ form_widget(form.next, {'label': 'Siguiente'}) }}
+{{ form_widget(form.prev, {'label': 'Volver'}) }}
+{{ form_widget(form.reset, {'label': 'Reiniciar'}) }}
+
+{{ form_end(form) }}
+

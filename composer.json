@@ -1,6 +1,7 @@
 {
   "name": "habitissimo/multiforms",
   "description": "Multi-step forms made easy",
+  "time": "2019-10-16",
   "keywords": [
     "forms",
     "multi-step",
@@ -11,15 +12,18 @@
   "authors": [
     {
       "name": "Habitissimo",
-      "email": "opensource@habitissimo.com"
+      "email": "opensource@habitissimo.com",
+      "role": "company"
     },
     {
       "name": "Carlos Piles",
-      "email": "cpiles@habitissimo.com"
+      "email": "cpiles@habitissimo.com",
+      "role": "core developer"
     },
     {
       "name": "Hugo Chinchilla",
-      "email": "hchinchilla@habitissimo.com"
+      "email": "hchinchilla@habitissimo.com",
+      "role": "evangelist"
     }
   ],
   "license": "MIT",
@@ -37,7 +41,11 @@
   },
   "autoload": {
     "psr-4": {
-      "Habitissimo\\MultiForm\\": "src/",
+      "Habitissimo\\MultiForm\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "Habitissimo\\MultiFormTest\\": "tests/"
     }
   }

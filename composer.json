@@ -1,6 +1,12 @@
 {
   "name": "habitissimo/multiforms",
   "description": "Multi-step forms made easy",
+  "keywords": [
+    "forms",
+    "multi-step",
+    "step",
+    "symfony"
+  ],
   "type": "library",
   "authors": [
     {
